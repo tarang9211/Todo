@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Todo App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" 
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+		body{
+			padding-top: 60px;
+		}
+
+		.pad-top-50{
+			padding-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container" ng-controller="MainController">
+
+		<div class="jumbotron text-center">
+			<h2>ToDo App</h2>
+			<p>Creating, Displaying, and Deleting ToDos.</p>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="formData.text"/>
+					</div>
+					<button type="submit" class="btn btn-primary" ng-click="createToDo()">Create new ToDo</button>
+				</form>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-12 pad-top-50">
+				<ul class="list-group">
+					<li class="list-group-item">Test content.</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
